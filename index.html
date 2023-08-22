@@ -19,6 +19,15 @@
 <body id="page-top">
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <a class="navbar-brand js-scroll-trigger" id="saveAsPdfBtn" href="https://www.sejda.com/html-to-pdf">Save as PDF</a>
+    <script>
+        document.getElementById('saveAsPdfBtn').addEventListener('click', function(e){
+            var pageUrl = encodeURIComponent(window.location.href);
+            var opts = ['save-link=' + pageUrl, 'pageOrientation=auto'];
+            window.open('https://www.sejda.com/html-to-pdf?' + opts.join('&'));
+            e.preventDefault();
+        });
+    </script>
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
         <span class="d-block d-lg-none">Abramovich Alexander</span>
         <span class="d-none d-lg-block">
@@ -50,8 +59,8 @@
                 <span class="text-primary">Alexander</span>
             </h1>
             <div class="subheading mb-5">
-                Warsaw · Legionowa 7 · 01-343 · (375) 29-8485759 ·
-                <a href="mailto:psylr@live.ru">psylr@live.ru</a>
+                Warsaw · Legionowa 7 · 01-343 · 883778952 ·
+                <a className="m-lg-1" href="mailto:poly.technologyst@gmail.com"> poly.technologyst@gmail.com</a>
             </div>
             <p class="lead mb-5">
                 Software developer with 7 years of experience, specialization
