@@ -19,15 +19,6 @@
 <body id="page-top">
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-    <a class="navbar-brand js-scroll-trigger" id="saveAsPdfBtn" href="https://www.sejda.com/html-to-pdf">Save as PDF</a>
-    <script>
-        document.getElementById('saveAsPdfBtn').addEventListener('click', function(e){
-            var pageUrl = encodeURIComponent(window.location.href);
-            var opts = ['save-link=' + pageUrl, 'pageOrientation=auto'];
-            window.open('https://www.sejda.com/html-to-pdf?' + opts.join('&'));
-            e.preventDefault();
-        });
-    </script>
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
         <span class="d-block d-lg-none">Abramovich Alexander</span>
         <span class="d-none d-lg-block">
@@ -46,6 +37,18 @@
             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger link-info" id="saveAsPdfBtn" href="https://www.sejda.com/html-to-pdf">
+                    Save as PDF</a>
+                <script>
+                    document.getElementById('saveAsPdfBtn').addEventListener('click', function (e) {
+                        var pageUrl = encodeURIComponent(window.location.href);
+                        var opts = ['save-link=' + pageUrl, 'pageOrientation=auto'];
+                        window.open('https://www.sejda.com/html-to-pdf?' + opts.join('&'));
+                        e.preventDefault();
+                    });
+                </script>
+            </li>
         </ul>
     </div>
 </nav>
